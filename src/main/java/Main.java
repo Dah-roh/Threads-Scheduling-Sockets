@@ -3,6 +3,9 @@ public class Main {
     public static String lockingWithAnotherString = "Second Lock";
 
     public static void main(String args[]) {
+        Synchronization synchronization = new Synchronization();
+        LombokExample lombokExample = new LombokExample("SOMETHING", 3,4,synchronization);
+        lombokExample.getSynchronization().toString();
         ThreadDemo1 thread1 = new ThreadDemo1();
         ThreadDemo2 thread2 = new ThreadDemo2();
         thread1.start();
